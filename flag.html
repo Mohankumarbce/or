@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #video-container {
+            display: none; /* Initially hide the video container */
+            margin-top: 20px;
+        }
+
+        /* Set a fixed width for the video */
+        #my-video {
+            width: 400px;
+        }
+        #image-container {
+            display: none; /* Initially hide the image container */
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showVideo() {
+            // Get the video container
+            var videoContainer = document.getElementById('video-container');
+
+            // Set the source attribute of the video
+            document.getElementById('my-video').src = 'vi.mp4';
+
+            // Show the video container
+            videoContainer.style.display = 'block';
+        }
+        function showImage() {
+            // Get the image container
+            var imageContainer = document.getElementById('image-container');
+
+            // Set the source attribute of the image
+            document.getElementById('my-image').src = 'a.png';
+
+            // Show the image container
+            imageContainer.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Show Video Example</h1>
+    
+    <!-- Button to trigger the action -->
+    <button onclick="showVideo()">Show Video</button>
+
+    <!-- Container to hold the video (initially hidden) -->
+    <div id="video-container">
+        <!-- Video element with an initial empty source -->
+        <video id="my-video" controls>
+            Your browser does not support the video tag.
+        </video>
+    <!-- Button to trigger the action -->
+    <button onclick="showImage()">Show Image</button>
+
+    <!-- Container to hold the image (initially hidden) -->
+    <div id="image-container">
+        <!-- Image element with an initial empty source -->
+        <img id="my-image" src="" alt="Displayed Image">
+    </div>
+
+</body>
+</html>
+
